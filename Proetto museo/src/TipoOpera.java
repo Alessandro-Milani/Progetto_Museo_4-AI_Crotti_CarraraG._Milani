@@ -1,2 +1,5 @@
-public class TipoOpera {
+public enum TipoOpera {
+
+    
+
 }
