@@ -5,9 +5,8 @@ Dipinto,
     reperto,
     incisione,
     fotografia,
-    multimediale,
     mosaico,
-    ceramica
+    ceramicaTipo
     
 
 }
