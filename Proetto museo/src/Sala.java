@@ -7,11 +7,13 @@ public class Sala {
     private ArrayList<Opera> opere;
 
 
+
     public Sala(int n_sala, int capienzaMax) {
         this.n_sala = n_sala;  // MAGGIORE 0 controlli
         this.capienzaMax = capienzaMax; //MAGG 0
         this.capienzaAtt = 0;// MAGG 0 e minore capienza
         opere = new ArrayList<Opera>();
+
 
     }
 
@@ -26,6 +28,8 @@ public class Sala {
 
 
     //SETTERS
+    //HA SENSO CAMBIARE CON IL SET IL TIPO OPERA???
+
     public void setN_sala(int n_sala) {
         this.n_sala = n_sala;
     }
@@ -33,12 +37,16 @@ public class Sala {
     public void setCapienza_max(int capienzaMax) {
         this.capienzaMax = capienzaMax;
     }
+    //SET CAPIENZA ATTUALE NON HA SENSO PK é IL COUNT DELLA LISTA
 
-    public void setCapienzaAtt(int capienzaAtt) {
-        this.capienzaAtt = capienzaAtt;
-    }
 
-    //GETTERS
+
+
+
+    
+
+
+
     public ArrayList<Opera> getOpere() {
         return this.opere;
     }
