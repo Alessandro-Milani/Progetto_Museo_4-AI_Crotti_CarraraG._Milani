@@ -2,4 +2,29 @@ package Museo;
 
 public enum TipoOpera {
 
+    PITTURA,
+    SCULTURA,
+    DISEGNO,
+    INCISIONE,
+    FOTOGRAFIA,
+    INSTALLAZIONE,
+    MOSAICO,
+    AFFRESCO,
+    CERAMICA,
+    ARAZZO,
+    ARCHITETTURA,
+    DESIGN,
+    ROMANZO,
+    RACCONTO,
+    POESIA,
+    SAGGIO,
+    TEATRO,
+    COMPOSIZIONE_MUSICALE,
+    OPERA_LIRICA,
+    FILM,
+    DOCUMENTARIO,
+    CORTOMETRAGGIO,
+    VIDEOGIOCO,
+    OPERA_DIGITALE
 }
+
