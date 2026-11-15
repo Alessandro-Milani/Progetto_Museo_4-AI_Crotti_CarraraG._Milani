@@ -7,7 +7,9 @@ Dipinto,
     incisione,
     fotografia,
     mosaico,
-    ceramicaTipo
+    ceramicaTipo;
     
 
+
 }
+
