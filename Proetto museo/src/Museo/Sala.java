@@ -31,7 +31,7 @@ public class Sala {
 
     public void togliOpera(Opera opera) {
         if (this.opere.size() <= 0) {
-            throw new IllegalStateException("la SALA è già VUOTA  non puoi togliere opere che non ci son");
+            throw new IllegalStateException("la SALA è già VUOTA  non puoi togliere opere che non ci sono");
         } else {
             if (this.opere.contains(opera)){
             this.opere.remove(opera);}
