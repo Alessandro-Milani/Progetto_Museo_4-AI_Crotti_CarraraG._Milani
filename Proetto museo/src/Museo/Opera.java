@@ -100,7 +100,7 @@ public class Opera {
 
     @Override
     public String toString() {
-        return "[" + idOpera + "] " + titolo + " (" + anno + ") - " + autore
+        return "[" + idOpera + "] " + titolo + " (" + anno + ") - " + autore.getNome()
                 + " | " + tipologia + " | " + corrente + " | " + provenienza;
     }
 }

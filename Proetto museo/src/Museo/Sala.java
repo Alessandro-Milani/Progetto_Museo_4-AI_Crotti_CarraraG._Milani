@@ -70,7 +70,20 @@ public class Sala {
 
     @Override
     public String toString() {
-        return " numero sala: " + this.n_sala + "\n capienza attuale: " + opere.size() + "\n capienza massima: " + this.capienzaMax;
+
+        String testo = " numero sala: " + this.n_sala
+                + "\n capienza attuale: " + opere.size()
+                + "\n capienza massima: " + this.capienzaMax + "\n";
+
+        for (int i = 0; i < opere.size(); i++) {
+            testo = testo + " " + (i+1)+") "+opere.get(i).getIdOpera() + " - " +opere.get(i).getTitolo() + "\n";
+        }
+
+        return testo;
+
         //FARE QUI IL RAGIONAMENTO PER STAMPARE CON IL FOR LE OPERE (il loro nome) CONTENUTE
+
+
+
     }
 }
