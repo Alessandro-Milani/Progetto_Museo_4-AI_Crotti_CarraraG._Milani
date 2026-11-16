@@ -26,7 +26,7 @@ import java.time.Year;
             return MorteAutore;
         }
 
-
+        
         @Override
         public String toString(){
             return Nome + "[ Nato nel: " + NascitaAutore + " - Morto nel: " + MorteAutore + " " + PrimaODopoCristo +"]";
