@@ -81,25 +81,9 @@ public class Museo {
 
             while (tempoAttuale.isBefore(fineTurno) && esci==false) {
 
-                int casualitaEvento = random.nextInt(100);
-                if (casualitaEvento >= 1 && casualitaEvento <= 7) {
-                    Evento e1 = new Evento("incendio", tempoAttuale, tempoAttuale.plusHours(5));
-                    e1.danneggiamento(listaSale);
-                    tempoAttuale = tempoAttuale.plusHours(7);
-                    IO.println("EVENTO !!!" + e1.getNome());
-                } else if (casualitaEvento >= 8 && casualitaEvento <= 18) {
-                    Evento e2 = new Evento("alluvione", tempoAttuale, tempoAttuale.plusHours(2));
-                    e2.danneggiamento(listaSale);
-                    IO.println("EVENTO !!!" + e2.getNome());
-                    tempoAttuale = tempoAttuale.plusHours(2);
-
-                } else if (casualitaEvento >= 19 && casualitaEvento <= 24) {
-                    Evento e3 = new Evento("furto", tempoAttuale, tempoAttuale.plusHours(1));
-                    e3.rimozione(listaSale);
-                    tempoAttuale = tempoAttuale.plusHours(1);
-                }
 
 
+                int ore_passate_ = 1;
                 boolean passato=false;
                 while (passato==false && esci==false){
                     IO.print(" \n \n \n ORARIO " + tempoAttuale.format(formatter) + "   \n ");
@@ -113,13 +97,36 @@ public class Museo {
 
                         if (ore_passate>=1 && ore_passate<=24){
                             passato=true;
-                            tempoAttuale = tempoAttuale.plusHours(ore_passate);
+                            for (int i = 0; i < ore_passate; i++) {
+                                int casualitaEvento = random.nextInt(100);
+                                if (casualitaEvento >= 1 && casualitaEvento <= 4) {
+                                    Evento e1 = new Evento("incendio", tempoAttuale, tempoAttuale.plusHours(5));
+                                    e1.danneggiamento(listaSale);
+                                    tempoAttuale = tempoAttuale.plusHours(7);
+                                    IO.println("EVENTO !!!" + e1.getNome());
+                                } else if (casualitaEvento >= 5 && casualitaEvento <= 10) {
+                                    Evento e2 = new Evento("alluvione", tempoAttuale, tempoAttuale.plusHours(2));
+                                    e2.danneggiamento(listaSale);
+                                    IO.println("EVENTO " + e2.getNome());
+                                    tempoAttuale = tempoAttuale.plusHours(2);
+
+                                } else if (casualitaEvento >= 19 && casualitaEvento <= 24) {
+                                    Evento e3 = new Evento("furto", tempoAttuale, tempoAttuale.plusHours(1));
+                                    e3.rimozione(listaSale);
+                                    tempoAttuale = tempoAttuale.plusHours(1);
+                                }
+                                IO.println(i);
+                                tempoAttuale = tempoAttuale.plusHours(1);
+
+                            }
+
                         }
 
                     }
                     if (scelta.equals("0")){
                         IO.print("GRAZIE PER AVER USATO IL NOSTRO PROGRAMMA");
                         esci=true;
+
                     }
                 }
 
