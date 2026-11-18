@@ -8,7 +8,7 @@ public final class Controlli_String {
         if (Nome.equals("")) {
             Nome = "sconosciuto";
         } else if (Nome.length() < 2 || Nome.length() > 100) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Nome non valido");
         }
         return Nome;
     }

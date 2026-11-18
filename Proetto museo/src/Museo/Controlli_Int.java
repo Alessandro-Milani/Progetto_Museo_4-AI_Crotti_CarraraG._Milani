@@ -6,7 +6,7 @@ public final class Controlli_Int {
 
     public static void Controla_codice(int Codice){
         if (Codice != cod_personale){
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("codice dipendente non corretto");
         }
     }
 
