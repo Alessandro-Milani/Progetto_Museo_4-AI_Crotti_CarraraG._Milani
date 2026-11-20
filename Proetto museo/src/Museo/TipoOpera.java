@@ -1,10 +1,4 @@
 public enum TipoOpera {
-<<<<<<< Updated upstream:Proetto museo/src/TipoOpera.java
-
-    
-
-}
-=======
     PITTURA,
     SCULTURA,
     DISEGNO,
@@ -30,4 +24,3 @@ public enum TipoOpera {
     VIDEOGIOCO,
     OPERA_DIGITALE
 }
->>>>>>> Stashed changes:Proetto museo/src/Museo/TipoOpera.java
