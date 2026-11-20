@@ -1,3 +1,5 @@
+package Museo;
+
 public enum TipoCorrente {
     ARTE_CLASSICA,
     ARTE_BIZANTINA,

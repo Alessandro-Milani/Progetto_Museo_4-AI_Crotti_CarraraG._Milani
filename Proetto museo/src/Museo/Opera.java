@@ -1,4 +1,6 @@
 package Museo;
+
+
 import java.time.Year;
 
 public class Opera {
@@ -9,9 +11,10 @@ public class Opera {
     private String titolo;
     private String idOpera;
     private TipoCorrente corrente;
+    private int gradazione;
 
     public Opera(Year anno, Autore autore, String provenienza, TipoOpera tipologia,
-                 String titolo, String idOpera, TipoCorrente corrente) {
+                 String titolo, String idOpera, TipoCorrente corrente, int gradazione) {
         setAnno(anno);
         setAutore(autore);
         setProvenienza(provenienza);
@@ -19,10 +22,14 @@ public class Opera {
         setTitolo(titolo);
         setIdOpera(idOpera);
         setCorrente(corrente);
+        this.gradazione=Controlli_Int.controlla_gradazione(gradazione);
     }
 
     public Year getAnno() {
         return anno;
+    }
+    public int getGradazione() {
+        return gradazione;
     }
 
     public Autore getAutore() {
@@ -51,6 +58,11 @@ public class Opera {
 
     public final void setAnno(Year anno) {
         this.anno = Controlli_Year.ControllaAnnoObbligatorio(anno);
+    }
+
+    public void setGradazione(int gradazione){
+        Controlli_Int.controlla_gradazione(gradazione);
+        this.gradazione=gradazione;
     }
 
     public final void setAutore(Autore autore) {
@@ -88,7 +100,7 @@ public class Opera {
 
     @Override
     public String toString() {
-        return "[" + idOpera + "] " + titolo + " (" + anno + ") - " + autore
+        return "[" + idOpera + "] " + titolo + " (" + anno + ") - " + autore.getNome()
                 + " | " + tipologia + " | " + corrente + " | " + provenienza;
     }
 }
