@@ -88,12 +88,13 @@ public class Museo {
                 while (passato==false && esci==false){
                     IO.print(" \n \n \n ORARIO " + tempoAttuale.format(formatter) + "   \n ");
 
-                    String scelta = IO.readln("scegliere la scelta di quello che si vuole fare tra:\n 1)visualizzare Sale e CONTENUTo\n 2) VISUALIZZARE EVENTI successi precedentemente \n 3) far PASSARE il tempo  \n 0)ESCI");
+                    String scelta = IO.readln("scegliere la scelta di quello che si vuole fare tra:\n 1)visualizzare Sale e CONTENUTo\n 2)  vedere tutti gli eventi caricati dall'avvio del programma\n 3) far PASSARE il tempo  \n 0)ESCI");
 
 
                     if (scelta.equals("3")){
                         String ore_passate_str = IO.readln("quante ore vuoi fare passare da 1 a 24 ");
                         int ore_passate = Integer.parseInt(ore_passate_str);
+                        IO.println("-----------------------RIASSUNTO DELLE ORE----------------------- \n");
 
                         if (ore_passate>=1 && ore_passate<=24){
                             passato=true;
@@ -103,26 +104,26 @@ public class Museo {
                                     Evento e1 = new Evento("incendio", tempoAttuale, tempoAttuale.plusHours(5));
                                     e1.danneggiamento(listaSale);
                                     tempoAttuale = tempoAttuale.plusHours(7);
-                                    IO.println("EVENTO !!!" + e1.getNome());
+                                    IO.println(tempoAttuale.format(formatter)  +"  EVENTO !!!" + e1.getNome());
                                 } else if (casualitaEvento >= 5 && casualitaEvento <= 9) {
                                     Evento e2 = new Evento("alluvione", tempoAttuale, tempoAttuale.plusHours(2));
                                     e2.danneggiamento(listaSale);
-                                    IO.println("EVENTO !!!" + e2.getNome());
+                                    IO.println(tempoAttuale.format(formatter)  +"  EVENTO !!!" + e2.getNome());
                                     tempoAttuale = tempoAttuale.plusHours(2);
 
                                 } else if (casualitaEvento >= 19 && casualitaEvento <= 24) {
                                     Evento e3 = new Evento("furto", tempoAttuale, tempoAttuale.plusHours(1));
                                     e3.rimozione(listaSale);
-                                    IO.println("EVENTO !!!" + e3.getNome());
+                                    IO.println(tempoAttuale.format(formatter)  +"  EVENTO !!!" + e3.getNome());
                                     tempoAttuale = tempoAttuale.plusHours(1);
-                                }
-                                IO.println(i);
+                                } else {IO.println(tempoAttuale.format(formatter)  + "   non è capitato nessun evento degno di nota");}
+
                                 tempoAttuale = tempoAttuale.plusHours(1);
 
                             }
 
                         }
-
+                        IO.println("----------------------------------------------------------------- \n");
                     }
                     if (scelta.equals("0")){
                         IO.print("GRAZIE PER AVER USATO IL NOSTRO PROGRAMMA");
