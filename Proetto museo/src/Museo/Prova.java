@@ -379,9 +379,7 @@ public class Prova {
 
                         for (int i = 0; i < opere.size(); i++) {
 
-                            Opera o = opere.get(i);
-
-                            IO.println((i + 1) + " - " + o.getTitolo() + " | gradazione: " + o.getGradazione() + "/100");
+                            IO.println((i + 1) +" - "+ opere.get(i));
 
                         }
 
