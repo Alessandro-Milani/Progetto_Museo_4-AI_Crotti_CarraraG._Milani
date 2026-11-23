@@ -1,6 +1,7 @@
 package Museo;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Sala {
     private int n_sala;
@@ -40,6 +41,15 @@ public class Sala {
         }
     }
 
+    public Opera cercaOpera(String titolo){
+        for (int i = 0; i < opere.size(); i++) {
+            String titoloOpera=opere.get(i).getTitolo().toLowerCase();
+            if (titoloOpera.equals(titolo)){
+                return opere.get(i);
+            }
+        }
+        throw new IllegalArgumentException("non ci sono opere chiamate così");
+    }
 
     //SETTERS
     //HA SENSO CAMBIARE CON IL SET IL TIPO OPERA???

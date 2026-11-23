@@ -1,6 +1,7 @@
 package Museo;
 
 import java.time.LocalDateTime;
+import java.util.Locale;
 import java.util.Random;
 import java.util.ArrayList;
 import java.time.format.DateTimeFormatter;
@@ -10,6 +11,7 @@ public class Museo {
 
     //DATA PERSONALIZZ trovabile dalla doc.            LocalDateTime var = LocalDateTime.of(2026,6,20,15,w30);
     public static void main(String[] args) {
+
         ArrayList<Sala> listaSale = new ArrayList<>();
 
         LocalDateTime inizio = LocalDateTime.now();
@@ -67,6 +69,7 @@ public class Museo {
             listaSale.add(sala1);
             listaSale.add(sala2);
             listaSale.add(sala3);
+            sala1.cercaOpera("ooo");
 
         } catch (IllegalArgumentException e) {
             IO.println("hai fatto un errorino da qualche parte");
@@ -86,6 +89,7 @@ public class Museo {
                 boolean passato = false;
 
                 IO.println("\nBENVENUTO NEL PROGRAMMA GESTIONALE DEL MUSEO");
+
                 while (passato == false && esci == false) {
 
                     IO.print(" \n \n  ORARIO " + tempoAttuale.format(formatter) + "   \n ");
@@ -94,6 +98,7 @@ public class Museo {
 
 
                     if (scelta.equals("3")) {
+
                         String ore_passate_str = IO.readln("quante ore vuoi fare passare da 1 a 24 ");
                         int ore_passate = Integer.parseInt(ore_passate_str);
                         IO.println("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n");
@@ -134,6 +139,25 @@ public class Museo {
                         }
                         IO.println("\n----------------------------------------------------------------- \n");
                     }
+
+                    if (scelta.equals("4")) {
+                        boolean operaTrovata=false;
+                        String operaDaCercare=IO.readln("che opera vuoi cercare? inserisci il nome").toLowerCase().trim();
+                        for (int i = 0; i < listaSale.size(); i++) {
+                            Sala salaDaScorrere=listaSale.get(i);
+                            try {
+
+
+                                Opera opera_cercata = salaDaScorrere.cercaOpera(operaDaCercare);
+                                IO.println(opera_cercata);
+                            }catch (IllegalArgumentException e) {
+                                    IO.println(e.getMessage()); //MODO PER STAMPARE IL MESSAGGIO
+                                //FARE CHE SE TROVA ALLA PRIMA SALA NON DIA L'ESCEPTION PER LE ALTRE ITERAZIONI
+                                }
+
+                        }
+
+                    }
                     if (scelta.equals("0")) {
                         IO.print("GRAZIE PER AVER USATO IL NOSTRO PROGRAMMA");
                         esci = true;
@@ -148,4 +172,6 @@ public class Museo {
             IO.println("non c'erano abbastanza opere per gli eventi  RIFAI CON piu opere");
         }
     }//FINE TURNO
+
+
 }
