@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.ArrayList;
 import java.time.format.DateTimeFormatter;
 import java.time.Year;
+
 public class Museo {
 
     //DATA PERSONALIZZ trovabile dalla doc.            LocalDateTime var = LocalDateTime.of(2026,6,20,15,w30);
@@ -15,7 +16,7 @@ public class Museo {
         LocalDateTime tempoAttuale = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         LocalDateTime fineTurno = inizio.plusDays(30);
-        boolean esci=false;
+        boolean esci = false;
         Random random = new Random();
 
         //CREAZIONE OGG
@@ -67,7 +68,7 @@ public class Museo {
             listaSale.add(sala2);
             listaSale.add(sala3);
 
-        }catch(IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             IO.println("hai fatto un errorino da qualche parte");
         }
 
@@ -79,55 +80,63 @@ public class Museo {
         try {
 
 
-            while (tempoAttuale.isBefore(fineTurno) && esci==false) {
+            while (tempoAttuale.isBefore(fineTurno) && esci == false) {
 
 
+                boolean passato = false;
+
+                IO.println("\nBENVENUTO NEL PROGRAMMA GESTIONALE DEL MUSEO");
+                while (passato == false && esci == false) {
+
+                    IO.print(" \n \n  ORARIO " + tempoAttuale.format(formatter) + "   \n ");
+
+                    String scelta = IO.readln("scegliere ciò che si vuole fare tra:\n 1)visualizzare Sale e CONTENUTo\n 2)  vedere tutti gli eventi caricati dall'avvio del programma\n 3) far PASSARE il tempo  \n 0)ESCI");
 
 
-                boolean passato=false;
-                while (passato==false && esci==false){
-                    IO.print(" \n \n \n ORARIO " + tempoAttuale.format(formatter) + "   \n ");
-
-                    String scelta = IO.readln("scegliere la scelta di quello che si vuole fare tra:\n 1)visualizzare Sale e CONTENUTo\n 2)  vedere tutti gli eventi caricati dall'avvio del programma\n 3) far PASSARE il tempo  \n 0)ESCI");
-
-
-                    if (scelta.equals("3")){
+                    if (scelta.equals("3")) {
                         String ore_passate_str = IO.readln("quante ore vuoi fare passare da 1 a 24 ");
                         int ore_passate = Integer.parseInt(ore_passate_str);
+                        IO.println("\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n");
                         IO.println("-----------------------RIASSUNTO DELLE ORE----------------------- \n");
 
-                        if (ore_passate>=1 && ore_passate<=24){
-                            passato=true;
+                        if (ore_passate >= 1 && ore_passate <= 24) {
+                            passato = true;
+
                             for (int i = 0; i < ore_passate; i++) {
+
                                 int casualitaEvento = random.nextInt(100);
-                                if (casualitaEvento >= 1 && casualitaEvento <= 4) {
+                                if (casualitaEvento >= 1 && casualitaEvento <= 2) {
                                     Evento e1 = new Evento("incendio", tempoAttuale, tempoAttuale.plusHours(5));
                                     e1.danneggiamento(listaSale);
                                     tempoAttuale = tempoAttuale.plusHours(7);
-                                    IO.println(tempoAttuale.format(formatter)  +"  EVENTO !!!" + e1.getNome());
-                                } else if (casualitaEvento >= 5 && casualitaEvento <= 9) {
+                                    IO.println(tempoAttuale.format(formatter) + "  EVENTO !!!" + e1.getNome());
+                                } else if (casualitaEvento >= 3 && casualitaEvento <= 4) {
                                     Evento e2 = new Evento("alluvione", tempoAttuale, tempoAttuale.plusHours(2));
                                     e2.danneggiamento(listaSale);
-                                    IO.println(tempoAttuale.format(formatter)  +"  EVENTO !!!" + e2.getNome());
+                                    IO.println(tempoAttuale.format(formatter) + "  EVENTO !!!" + e2.getNome());
                                     tempoAttuale = tempoAttuale.plusHours(2);
 
-                                } else if (casualitaEvento >= 19 && casualitaEvento <= 24) {
+                                } else if (casualitaEvento >= 5 && casualitaEvento <= 6) {
                                     Evento e3 = new Evento("furto", tempoAttuale, tempoAttuale.plusHours(1));
                                     e3.rimozione(listaSale);
-                                    IO.println(tempoAttuale.format(formatter)  +"  EVENTO !!!" + e3.getNome());
+                                    IO.println(tempoAttuale.format(formatter) + "  EVENTO !!!" + e3.getNome());
                                     tempoAttuale = tempoAttuale.plusHours(1);
-                                } else {IO.println(tempoAttuale.format(formatter)  + "   non è capitato nessun evento degno di nota");}
+                                } else {
+                                    IO.println(tempoAttuale.format(formatter) + "   -");
+                                }
 
                                 tempoAttuale = tempoAttuale.plusHours(1);
 
                             }
 
+                        } else {
+                            IO.println("LE ORE DEVONO ESSERE COMPRESE TRA 1 e 24");
                         }
-                        IO.println("----------------------------------------------------------------- \n");
+                        IO.println("\n----------------------------------------------------------------- \n");
                     }
-                    if (scelta.equals("0")){
+                    if (scelta.equals("0")) {
                         IO.print("GRAZIE PER AVER USATO IL NOSTRO PROGRAMMA");
-                        esci=true;
+                        esci = true;
 
                     }
                 }
@@ -135,6 +144,8 @@ public class Museo {
             }//FINE CICLO SI
 
 
-        }catch (IllegalArgumentException e){IO.println("non c'erano abbastanza opere per gli eventi  RIFAI CON piu opere");}
+        } catch (IllegalArgumentException e) {
+            IO.println("non c'erano abbastanza opere per gli eventi  RIFAI CON piu opere");
+        }
     }//FINE TURNO
 }
