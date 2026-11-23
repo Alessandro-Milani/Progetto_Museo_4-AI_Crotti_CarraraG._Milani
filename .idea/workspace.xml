@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="769f59ff-807c-4236-bc9b-24685187d784" name="Changes" comment="Crud">
+      <change beforePath="$PROJECT_DIR$/Proetto museo/src/Museo/Prova.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proetto museo/src/Museo/Prova.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Joversa1&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Alessandro-Milani/Progetto_Museo_4-AI_Crotti_CarraraG._Milani.git&quot;,
+    &quot;accountId&quot;: &quot;46191a2e-6d9b-45c8-a143-3b7361f9cff1&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Proetto museo/src/Museo/Prova.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0615571894634331E-81" />
+      <entry key="MS500" value="6.92830995945119E-17" />
+      <entry key="S2" value="1.376621312694138E-4" />
+      <entry key="S5" value="0.042787362244859656" />
+      <entry key="S10" value="0.29198001349230585" />
+      <entry key="S30" value="1.0723435148946254" />
+      <entry key="S60" value="1.7298886628168726" />
+      <entry key="M2" value="2.928910437149988" />
+      <entry key="M5" value="6.932194104314262" />
+      <entry key="M10" value="15.879703741143487" />
+      <entry key="M15" value="26.308698080891475" />
+      <entry key="M30" value="56.05387667047694" />
+      <entry key="H1" value="93.25473114009729" />
+      <entry key="H2" value="124.75820213690785" />
+      <entry key="H4" value="145.6245957935542" />
+      <entry key="D1" value="166.41451211578234" />
+      <entry key="W1" value="170.33557780227213" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0000001529962894" />
+      <entry key="MS500" value="1.0433447177853798" />
+      <entry key="S2" value="1.4568163979996018" />
+      <entry key="S5" value="1.8028600398977075" />
+      <entry key="S10" value="2.233036804918169" />
+      <entry key="S30" value="3.1531003458567763" />
+      <entry key="S60" value="3.861145881316858" />
+      <entry key="M2" value="5.0092578057777155" />
+      <entry key="M5" value="7.5673019058775415" />
+      <entry key="M10" value="11.094832247081476" />
+      <entry key="M15" value="14.707352692275345" />
+      <entry key="M30" value="24.408234716143102" />
+      <entry key="H1" value="35.95034708515614" />
+      <entry key="H2" value="45.42496108654633" />
+      <entry key="H4" value="51.59245926795353" />
+      <entry key="D1" value="57.668184665896" />
+      <entry key="W1" value="58.80719889157298" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="6.670118441184879E-4" />
+      <entry key="MS500" value="0.2323131032826026" />
+      <entry key="S2" value="0.8549007422464711" />
+      <entry key="S5" value="1.4444475399361076" />
+      <entry key="S10" value="2.2431692914298718" />
+      <entry key="S30" value="4.07613881677187" />
+      <entry key="S60" value="5.491625503982828" />
+      <entry key="M2" value="7.864608593923716" />
+      <entry key="M5" value="14.440577187386147" />
+      <entry key="M10" value="26.912981723261137" />
+      <entry key="M15" value="40.9521591618938" />
+      <entry key="M30" value="80.40180556398076" />
+      <entry key="H1" value="129.15910680757798" />
+      <entry key="H2" value="170.15385733590992" />
+      <entry key="H4" value="197.20036668558993" />
+      <entry key="D1" value="224.07958296572627" />
+      <entry key="W1" value="229.14232298180093" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3MBdGTbS7vesCbF5JXV1k0Y3rPr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Museo.executor": "Run",
+    "Application.Prova.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-jps configuration error": "Build failed to start",
+    "Notification.DoNotAsk-jps configuration error": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "Carrara",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/GABRIELCARRARA/Desktop/Progetto_Museo_4-AI_Crotti_CarraraG._Milani",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Prova" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Museo.Prova" />
+      <module name="Progetto_Museo_4-AI_Crotti_CarraraG._Milani" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Museo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Progetto Museo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Progetto Museo" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Prova" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10315.125" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10315.125" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="769f59ff-807c-4236-bc9b-24685187d784" name="Changes" comment="" />
+      <created>1794827798474</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1794827798474</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crud" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
