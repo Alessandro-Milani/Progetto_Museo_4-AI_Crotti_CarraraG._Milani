@@ -331,13 +331,7 @@ public class Prova {
         listaSale.add(sala2);
         listaSale.add(sala3);
 
-        /*
-        ArrayList<Opera> Lista_Opere_1 = sala1.getOpere();
-        ArrayList<Opera> Lista_Opere_2 = sala2.getOpere();
-        ArrayList<Opera> Lista_Opere_3 = sala3.getOpere();
-        */
-
-        String Scelta = "a";
+  String Scelta = "a";
         while(!Scelta.equals("0")){
             IO.println("---------------MUSEO----------------");
             IO.println("1 - Visualizza Sala");
@@ -352,9 +346,7 @@ public class Prova {
                 int Num_sale = listaSale.size();
 
                 for (int i = 0; i < Num_sale; i++) {
-
                     IO.println(listaSale.get(i));
-
                 }
 
                 int Scelta_Sala = Integer.parseInt(IO.readln("Quale sala scegli? "));
@@ -366,9 +358,6 @@ public class Prova {
                 } else {
 
                     Sala Sala_Scelta = listaSale.get(Scelta_Sala - 1);
-
-                    IO.println(Sala_Scelta);
-
                     ArrayList<Opera> opere = Sala_Scelta.getOpere();
 
                     if (opere.isEmpty()) {
@@ -377,38 +366,61 @@ public class Prova {
 
                     } else {
 
-                        for (int i = 0; i < opere.size(); i++) {
+                        String Azione = "";
 
-                            IO.println((i + 1) +" - "+ opere.get(i));
+                        while (!Azione.equals("0")) {
 
-                        }
-
-                        String Restaura = IO.readln("Vuoi restaurare un'opera? (s/n) ");
-
-                        if (Restaura.equalsIgnoreCase("s")) {
-
-                            int Scelta_Opera = Integer.parseInt(IO.readln("Quale opera? "));
-
-                            if (Scelta_Opera < 1 || Scelta_Opera > opere.size()) {
-
-                                IO.println("Opera inesistente");
-
-                            } else {
-
-                                Opera Opera_Scelta = opere.get(Scelta_Opera - 1);
-
-                                Evento restauro = new Evento("Restauro", java.time.LocalDateTime.now(), java.time.LocalDateTime.now());
-
-                                restauro.Restauro(Opera_Scelta);
-
-                                IO.println("Restaurata! Nuova gradazione di " + Opera_Scelta.getTitolo() + ": " + Opera_Scelta.getGradazione() + "/100");
-
+                            // Stampo le opere della sala (senza gradazione)
+                            IO.println("--------- OPERE SALA " + Sala_Scelta.getN_sala() + " ---------");
+                            for (int i = 0; i < opere.size(); i++) {
+                                IO.println((i + 1) + " - " + opere.get(i));
                             }
 
+                            IO.println("1 - Visualizza nel dettaglio un'opera");
+                            IO.println("2 - Restaura un'opera");
+                            IO.println("0 - Torna al menu");
+                            Azione = IO.readln("Cosa vuoi fare? ");
+
+                            if (Azione.equals("1") || Azione.equals("2")) {
+
+                                int Scelta_Opera = Integer.parseInt(IO.readln("Quale opera? "));
+
+                                if (Scelta_Opera < 1 || Scelta_Opera > opere.size()) {
+
+                                    IO.println("Opera inesistente");
+
+                                } else {
+
+                                    Opera Opera_Scelta = opere.get(Scelta_Opera - 1);
+
+                                    if (Azione.equals("1")) {
+
+                                        // DETTAGLIO: qui si vede anche la gradazione
+                                        IO.println("--------- DETTAGLIO OPERA ---------");
+                                        IO.println("ID:          " + Opera_Scelta.getIdOpera());
+                                        IO.println("Titolo:      " + Opera_Scelta.getTitolo());
+                                        IO.println("Autore:      " + Opera_Scelta.getAutore());
+                                        IO.println("Anno:        " + Opera_Scelta.getAnno());
+                                        IO.println("Tipologia:   " + Opera_Scelta.getTipologia());
+                                        IO.println("Corrente:    " + Opera_Scelta.getCorrente());
+                                        IO.println("Provenienza: " + Opera_Scelta.getProvenienza());
+                                        IO.println("Gradazione:  " + Opera_Scelta.getGradazione() + "/100");
+                                        IO.println("-----------------------------------");
+
+                                    } else {
+
+                                        Evento restauro = new Evento("Restauro", java.time.LocalDateTime.now(), java.time.LocalDateTime.now());
+                                        restauro.Restauro(Opera_Scelta);
+                                        IO.println("Opera \"" + Opera_Scelta.getTitolo() + "\" restaurata!");
+
+                                    }
+                                }
+
+                            } else if (!Azione.equals("0")) {
+                                IO.println("Scelta non valida");
+                            }
                         }
-
                     }
-
                 }
 
             }
